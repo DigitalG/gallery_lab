@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+{% include 'socialbar.html' %}
+<div class="page">
+    {% include 'sidebar.html' %}
+    <div class="featured-grid">
+        {% for g in gallery %}
+            <a href="{% url 'artwork' g.id %}" class="featured">
+                <div class="img" style="background-image: url({{ g.image.url }})"></div>
+                <span class="title">{{ g.name }}</span>
+                <span class="big-title">{{ g.name }}</span>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% include 'footer.html' %}
+</body>
+</html>

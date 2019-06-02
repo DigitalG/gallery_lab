@@ -1,0 +1,13 @@
+{% load static %}
+<div class="sidebar">
+    <a href="/" class="logo"
+         style="background-image: url({% static 'img/SITE-2.jpg' %})"></a>
+    <ul class="navigation">
+        <li><a href="/" class="hvr-btm-slide"><span data-hover="Home">Home</span></a></li>
+        <li><a href="{% url "art" %}" class="hvr-btm-slide"><span data-hover="Art">Art</span></a></li>
+        <li><a href="" class="hvr-btm-slide soon"><span data-hover="Soon">Bio</span></a></li>
+        <li><a href="" class="hvr-btm-slide soon"><span data-hover="Soon">News</span></a></li>
+        <li><a href="" class="hvr-btm-slide soon"><span data-hover="Soon">Commissions</span></a></li>
+        <li><a class="hvr-btm-slide soon"><span data-hover="Soon!">Merch</span></a></li>
+    </ul>
+</div>
